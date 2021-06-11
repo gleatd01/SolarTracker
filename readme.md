@@ -5,3 +5,5 @@ source env/bin/activate
 
 sudo apt-get install python-smbus
 sudo apt-get install i2c-tools
+
+stty -F /dev/ttyACM0 ispeed 4800 && cat </dev/ttyACM0
