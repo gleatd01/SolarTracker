@@ -64,5 +64,9 @@ az = normAngle(az);
 print("Position from local horizon: ", alt)
 print("Direction from North Pole: ", az)
 
-#kit.servo[0].angle = az
-#kit.servo[3].angle =  alt 90 is straight up, 180 is at horizon
+kit.servo[0].actuation_range = 180
+#kit.servo[0].set_pulse_width_range(1000, 2000)
+kit.servo[0].angle = 90
+kit.servo[3].actuation_range = 150
+#kit.servo[3].set_pulse_width_range(1000, 2000)
+kit.servo[3].angle = 100 #alt 90 is straight up, 180 is at horizon
